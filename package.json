@@ -2,9 +2,10 @@
   "name": "eb-www",
   "version": "0.1.0",
   "description": "ericbordeau.com",
-  "author": "Eric Bordeau <ebordeau@salesforce.com>",
+  "author": "Eric Bordeau <ebordeau@gmail.com>",
   "private": true,
   "scripts": {
+    "start": "http-server -p ${PORT:=8080} -c-1",
     "watchify": "watchify -vd -p browserify-hmr -e src/main.js -o dist/build.js",
     "serve": "http-server -o -c 1 -a localhost",
     "dev": "npm-run-all --parallel watchify serve",
